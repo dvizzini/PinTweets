@@ -5,13 +5,16 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'pg', '0.14.1'
+gem 'pg', '0.14.1'
+
+gem 'therubyracer', '0.10.2'
+gem 'less-rails-bootstrap', '2.2.0'
+group :development, :test do
+  gem 'rspec-rails', '2.11.0'
 end
 
-group :development, :test do
-  gem 'sqlite3', '1.3.5'
-  gem 'rspec-rails', '2.11.0'
+group :test do
+  gem 'capybara', '1.1.2'
 end
 
 # Gems used only for assets and not required
