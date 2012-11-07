@@ -89,4 +89,10 @@
     </span>
   </div>
 
+  <div style="clear: both;"></div>
+    
+  <ul class="topnav below"></ul>  
+
+  <div id="caption"></div>
+  
 </div>

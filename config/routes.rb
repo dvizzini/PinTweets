@@ -1,11 +1,11 @@
 PinTweets::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
 
-  get "static_pages/about"
+  match '/about', to: 'static_pages#about'
 
-  get "static_pages/greatSearches"
+  match '/great_searches', to: 'static_pages#great_searches'
 
-  get "static_pages/contact"
+  match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

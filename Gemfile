@@ -5,16 +5,14 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', '0.14.1'
+gem 'pg', '~> 0.14.1'
 
-gem 'therubyracer', '0.10.2'
-gem 'less-rails-bootstrap', '2.2.0'
 group :development, :test do
-  gem 'rspec-rails', '2.11.0'
+  gem 'rspec-rails', '~> 2.11.0'
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '~> 1.1.2'
 end
 
 # Gems used only for assets and not required
@@ -23,9 +21,11 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.2.3'
+  gem 'twitter-bootstrap-rails', '~> 2.1.5'
 end
 
-gem 'jquery-rails', '2.0.2'
+gem 'jquery-rails', '~> 2.0.2'
+gem 'jquery-ui-rails', '~> 2.0.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,14 +1,94 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PinTweets</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+	<head>
 
-<%= yield %>
+    <meta charset="utf-8">
+    <title> <%= yield(:title) %> </title>
+		<meta name="description" content="<% yield(:title) %>" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Daniel Vizzini">
 
-</body>
+    <!-- Le styles -->
+    <%= stylesheet_link_tag   "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-meals.css" rel="stylesheet">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <!-- @TODO: get appropriate icons
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/vizzini-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/vizzini-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/vizzini-72.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/vizzini-57.png">
+    -->
+
+    <!-- @TODO: Incorporate this into css file -->
+		<style type="text/css">
+
+			body {
+				color: #000;
+			}
+			
+			b > a {
+				color: #000;
+			}
+			
+			a:hover {
+				text-decoration: none;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- Navbar
+		================================================== -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="navbar-inner">
+        <ul class="nav">
+          <li class=""> <%= link_to "Map", root_path %> </li>
+	        <li class=""> <%= link_to "Great Searches", great_searches_path %> </li>
+          <li class=""> <%= link_to "About", about_path %> </li>
+					<li class=""> <%= link_to "Contact", contact_path %> </li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Masthead
+		================================================== -->
+		<header class="jumbotron">
+			<div class="row">
+        <h1 class="span6">
+          <%= link_to "PinTweets", root_path %>
+        </h1>
+			</div>
+		</header>
+
+		<div class="container">
+      <div class="row">
+        <div class="span10">
+          <%= yield %>
+          
+          <div class="row" id="caption" />
+          <div class="row">
+            <p>
+              &copy; <a href="http://danielvizzini.com">Daniel Vizzini</a> under MIT License. See the <a href="https://github.com/dvizzini/PinTweets">GitHub</a>.
+            </p>
+          </div>
+        </div>
+      <br />
+		</div>
+	</body>
 </html>

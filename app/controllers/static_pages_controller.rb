@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def greatSearches
+  def great_searches
   end
 
   def contact
