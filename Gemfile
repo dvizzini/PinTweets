@@ -24,7 +24,7 @@ group :assets do
   gem 'twitter-bootstrap-rails', '~> 2.1.5'
 end
 
-gem 'jquery-rails', '~> 2.0.2'
+gem 'jquery-rails', '~> 3.1.3'
 gem 'jquery-ui-rails', '~> 2.0.2'
 
 # To use ActiveModel has_secure_password
